@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {User} from '../../interfaces/user';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-conversation',
@@ -7,7 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConversationComponent implements OnInit {
 
-  constructor() { }
+  friendId: any;
+  friends: User[] = [];
+  friend: User;
+  constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
+    this.friendId = this.activatedRoute.snapshot.params['uid'];
+    console.log(this.friendId);
+    this.friends = this.userService.getFriends();
+
+    // Buscamos en nuestro arreglo el id que enviamos
+    this.friend = this.friends.find((record) => record.uid == this.friendId);
+    console.log(this.friend);
+  }
+
 
   ngOnInit() {
   }
