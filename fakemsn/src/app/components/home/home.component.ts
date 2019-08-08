@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
     this.friends = this.userService.getFriends();
     console.log(this.friends);
   }
-
   ngOnInit() {
   }
 
