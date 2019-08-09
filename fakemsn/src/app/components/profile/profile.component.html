@@ -1,3 +1,47 @@
-<p>
-  profile works!
-</p>
+<div id="profileContainer">
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="avatarFrameOnline mt-5 mb-5">
+          <img src="assets/img/generic_avatar.png" class="avatarImage img-fluid">
+        </div>
+        <hr>
+        <div>
+          <span>Change Photo</span>
+          <label class="custom-file-upload">
+            <input type="file">
+            Upload Avatar
+          </label>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div>
+          <label fixed>Nick</label>
+          <input type="text" class="form-control"/>
+        </div>
+        <div>
+          <label fixed>Subnick</label>
+          <input type="text" class="form-control"/>
+        </div>
+        <div>
+          <label fixed>Email</label>
+          <input type="text" disabled class="form-control"/>
+        </div>
+
+        <div>
+          <label fixed>Nick</label>
+          <select class="form-control">
+            <option value="online">Online</option>
+            <option value="away">Away</option>
+            <option value="busy">Busy</option>
+            <option value="appear_offline">Offline</option>
+          </select>
+        </div>
+        <hr>
+        <a class="btn btn-primary btn-block">
+          Save
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

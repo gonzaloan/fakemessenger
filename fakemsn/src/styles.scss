@@ -1,13 +1,13 @@
 .avatarFrameOffline {
 
-  background: rgba(242,246,248,1);
-  background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 85%, rgba(224,239,249,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(51%, rgba(181,198,208,1)), color-stop(85%, rgba(216,225,231,1)), color-stop(100%, rgba(224,239,249,1)));
-  background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 85%, rgba(224,239,249,1) 100%);
-  background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 85%, rgba(224,239,249,1) 100%);
-  background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 85%, rgba(224,239,249,1) 100%);
-  background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 85%, rgba(224,239,249,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
+  background: rgba(242, 246, 248, 1);
+  background: -moz-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 51%, rgba(216, 225, 231, 1) 85%, rgba(224, 239, 249, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242, 246, 248, 1)), color-stop(51%, rgba(181, 198, 208, 1)), color-stop(85%, rgba(216, 225, 231, 1)), color-stop(100%, rgba(224, 239, 249, 1)));
+  background: -webkit-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 51%, rgba(216, 225, 231, 1) 85%, rgba(224, 239, 249, 1) 100%);
+  background: -o-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 51%, rgba(216, 225, 231, 1) 85%, rgba(224, 239, 249, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 51%, rgba(216, 225, 231, 1) 85%, rgba(224, 239, 249, 1) 100%);
+  background: linear-gradient(to bottom, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 51%, rgba(216, 225, 231, 1) 85%, rgba(224, 239, 249, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0);
 
   text-align: center;
   padding: 5%;
@@ -16,7 +16,45 @@
   display: inline-block;
 }
 
-.generalContent{
+
+.avatarFrameOnline {
+  background: rgba(210, 255, 82, 1);
+  background: -moz-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(145, 232, 66, 1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210, 255, 82, 1)), color-stop(100%, rgba(145, 232, 66, 1)));
+  background: -webkit-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(145, 232, 66, 1) 100%);
+  background: -o-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(145, 232, 66, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(210, 255, 82, 1) 0%, rgba(145, 232, 66, 1) 100%);
+  background: linear-gradient(to bottom, rgba(210, 255, 82, 1) 0%, rgba(145, 232, 66, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d2ff52', endColorstr='#91e842', GradientType=0);
+  text-align: center;
+  padding: 5%;
+  border-radius: 10px;
+  border: 1px solid white;
+  display: inline-block;
+}
+
+.generalContent {
   margin-top: 56px;
 }
 
+.avatarImage {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+input[type="file"] {
+  display: none;
+
+}
+
+.custom-file-upload {
+  background: #f2f6f8; /* Old browsers */
+  background: -moz-linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2f6f8 0%, #d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0); /* IE6-9 */
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: 1px solid #8dd2f3;
+}

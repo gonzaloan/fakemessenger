@@ -11,6 +11,7 @@ export class UserService {
   constructor() {
     const user1: User = {
       nick: 'Eduardo',
+      subNick: 'Chorizo Ampón',
       age: 24,
       email: 'ed@aoe.aoe',
       friend: true,
