@@ -14,23 +14,23 @@
           </label>
         </div>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-9" *ngIf="user">
         <div>
           <label fixed>Nick</label>
-          <input type="text" class="form-control"/>
+          <input [(ngModel)]="user.nick" type="text" class="form-control"/>
         </div>
         <div>
           <label fixed>Subnick</label>
-          <input type="text" class="form-control"/>
+          <input [(ngModel)]="user.subNick" type="text" class="form-control"/>
         </div>
         <div>
           <label fixed>Email</label>
-          <input type="text" disabled class="form-control"/>
+          <input [(ngModel)]="user.email" type="text" disabled class="form-control"/>
         </div>
 
         <div>
-          <label fixed>Nick</label>
-          <select class="form-control">
+          <label fixed>Status</label>
+          <select [(ngModel)]="user.status" class="form-control">
             <option value="online">Online</option>
             <option value="away">Away</option>
             <option value="busy">Busy</option>
@@ -38,7 +38,7 @@
           </select>
         </div>
         <hr>
-        <a class="btn btn-primary btn-block">
+        <a (click)="saveSettings()" class="btn btn-primary btn-block">
           Save
         </a>
       </div>

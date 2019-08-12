@@ -17,13 +17,14 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {AuthenticationGuard} from './services/authentication.guard';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent},
+    {path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'conversation/:uid', component: ConversationComponent},
-  {path: 'profile', component: ProfileComponent}
+  {path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard]}
 ];
 
 @NgModule({
