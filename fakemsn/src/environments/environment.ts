@@ -9,7 +9,7 @@ export const environment = {
     authDomain: 'fakessenger.firebaseapp.com',
     databaseURL: 'https://fakessenger.firebaseio.com',
     projectId: 'fakessenger',
-    storageBucket: '',
+    storageBucket: 'fakessenger.appspot.com',
     messagingSenderId: '71506136147'
   }
 };
