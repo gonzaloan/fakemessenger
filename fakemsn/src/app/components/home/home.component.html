@@ -13,7 +13,7 @@
             <br>
             <span>Write a personal message</span>
             <br>
-            <a (click)="logout()" >Logout</a>
+            <a (click)="logout()">Logout</a>
           </div>
         </div>
       </div>
@@ -26,12 +26,12 @@
         <input type="text" class="form-control" placeholder="Search Friend" [(ngModel)]="query"/>
       </div>
       <div class="col-md-auto">
-        <img src="assets/img/logo_live_add.png" class="icon">
+        <img (click)="open(content)" src="assets/img/logo_live_add.png" class="icon">
       </div>
     </div>
     <hr>
     <div>
-      <b *ngIf="friends" >Friends ({{friends.length}}/{{friends.length}})</b>
+      <b *ngIf="friends">Friends ({{friends.length}}/{{friends.length}})</b>
       <div *ngFor="let user of friends | search: query; let i = index" class="d-block mb-2">
         <img src="assets/img/logo_live_online.png" class="icon">
         <span routerLink="/conversation/{{user.uid}}">
@@ -45,3 +45,19 @@
 
 </div>
 
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add friend</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <b>Enter your friend's email</b>
+    <input type="email" class="form-control" placeholder="Email" [(ngModel)]="friendEmail"
+           (keyup.enter)="sendRequest()"/>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="sendRequest()">Save</button>
+  </div>
+</ng-template>

@@ -19,10 +19,13 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AuthenticationGuard} from './services/authentication.guard';
 import {ImageCropperModule} from 'ngx-image-cropper';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {BootstrapModalModule} from 'ng2-bootstrap-modal';
+import {RequestComponent} from './modals/request/request.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-    {path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard]},
+  {path: 'home', component: HomeComponent, canActivate: [AuthenticationGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'conversation/:uid', component: ConversationComponent},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard]}
@@ -36,7 +39,8 @@ const appRoutes: Routes = [
     ConversationComponent,
     ProfileComponent,
     MenuComponent,
-    SearchPipe
+    SearchPipe,
+    RequestComponent
   ],
   imports: [
     BrowserModule,
@@ -48,10 +52,13 @@ const appRoutes: Routes = [
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     AngularFireDatabaseModule,
-    ImageCropperModule
+    ImageCropperModule,
+    NgbModule,
+    BootstrapModalModule.forRoot({container: document.body})
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [RequestComponent]
 })
 export class AppModule {
 }
