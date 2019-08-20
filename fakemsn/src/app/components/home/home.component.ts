@@ -36,6 +36,11 @@ export class HomeComponent implements OnInit {
         this.userService.getUserById(status.uid)
           .valueChanges().subscribe((user: User) => {
           this.user = user;
+          if (this.user.friends) {
+            this.user.friends = Object.values(this.user.friends);
+            console.log(this.user);
+          }
+          console.log(user);
         });
       }
     )

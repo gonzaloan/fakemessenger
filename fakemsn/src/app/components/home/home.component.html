@@ -31,13 +31,20 @@
     </div>
     <hr>
     <div>
-      <b *ngIf="friends">Friends ({{friends.length}}/{{friends.length}})</b>
-      <div *ngFor="let user of friends | search: query; let i = index" class="d-block mb-2">
-        <img src="assets/img/logo_live_online.png" class="icon">
-        <span routerLink="/conversation/{{user.uid}}">
+      <b *ngIf="user && user.friends">Friends ({{user.friends.length}}/{{user.friends.length}})</b>
+      <div *ngIf="user && user.friends">
+        <div *ngFor="let user of user.friends | search: query; let i = index" class="d-block mb-2">
+          <div>{{user}}</div>
+
+          <!--
+          <span routerLink="/conversation/{{user.uid}}">
+          <img src="assets/img/logo_live_online.png" class="icon">
+
             {{user.nick}} - {{user.subNick || 'No subnick'}}
-          <small>{{user.email}}</small>
-          </span>
+            <small>{{user.email}}</small>
+            </span>
+            -->
+        </div>
       </div>
     </div>
 

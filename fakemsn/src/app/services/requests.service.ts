@@ -23,7 +23,7 @@ export class RequestsService {
    * Coloca status a un request que estamos enviando.
    */
   setRequestStatus(request, status) {
-    const cleanEmail = request.reveiver_email.replace('.', ',');
+    const cleanEmail = request.receiver_email.replace('.', ',');
     return this.angularFireDataBase
       .object('requests/' + cleanEmail + '/' + request.sender + '/status')
       .set(status);

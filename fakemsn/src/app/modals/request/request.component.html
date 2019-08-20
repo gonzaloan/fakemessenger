@@ -7,24 +7,24 @@
 
     <div class="modal-body" style="height: auto">
       <div class="row">
-        <div class="col-md-auto">
+        <div class="col-md-3">
           <img src="assets/img/generic_avatar.png" class="img-fluid"/>
         </div>
-        <div class="col-md">
+        <div class="col-md.9">
           <b>{{currentRequest.sender}}</b>
           <small>Has sended you a request</small>
         </div>
         <hr>
-        <h4>Do you want to add this person?</h4>
-        <input type="radio" name="addToMsn" [(ngModel)]="shouldAdd" value="yes" id="add-yes">
-        <label for="add-yes">Yes, i want to</label>
-
-        <input type="radio" name="addToMsn" [(ngModel)]="shouldAdd" value="no" id="add-no">
-        <label for="add-no">No, i don't</label>
-
-        <input type="radio" name="addToMsn" [(ngModel)]="shouldAdd" value="later" id="add-later">
-        <label for="add-later">Ask me later</label>
-
+        <div class="col-md-12">
+          <h4>Do you want to add this person?</h4>
+          <br>
+          <input type="radio" name="addToMsn" [(ngModel)]="shouldAdd" value="yes" id="add-yes">
+          <label for="add-yes">Yes, i want to</label>
+          <input type="radio" name="addToMsn" [(ngModel)]="shouldAdd" value="no" id="add-no">
+          <label for="add-no">No, i don't</label>
+          <input type="radio" name="addToMsn" [(ngModel)]="shouldAdd" value="later" id="add-later">
+          <label for="add-later">Ask me later</label>
+        </div>
       </div>
     </div>
     <div class="modal-footer">
