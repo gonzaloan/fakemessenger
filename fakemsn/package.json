@@ -1,13 +1,16 @@
 {
   "name": "fakemsn",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "ng build --base-href ./ && electron .",
+    "electron-aot": "ng build --prod && electron ."
   },
   "private": true,
   "dependencies": {
@@ -25,7 +28,9 @@
     "ajv": "^6.10.2",
     "bootstrap": "4.3.1",
     "core-js": "^2.5.4",
+    "electron": "6.0.3",
     "firebase": "^6.3.5",
+    "firebase-tools": "^7.2.4",
     "ng2-bootstrap-modal": "^1.0.1",
     "ngx-image-cropper": "^1.4.1",
     "node-sass": "^4.12.0",
