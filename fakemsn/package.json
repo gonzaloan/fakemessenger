@@ -33,7 +33,7 @@
     "firebase-tools": "^7.2.4",
     "ng2-bootstrap-modal": "^1.0.1",
     "ngx-image-cropper": "^1.4.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
